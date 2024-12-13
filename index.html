@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione</title>
+    <link rel="icon" href="img/batch-0---random-assets-5-high-resolution-logo-transparent.png"><!--Favicon del sito-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/register.min.css" type="text/css"><!-- link al css per la pagina registrazione -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css"><!-- link al css generale -->
+    <script src="./validatore.js" type="application/javascript" async></script><!-- link al javascript -->
+    <style>
+        .errore{
+            color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar border-bottom-warning"><!-- Inizio della navbar -->
+            <div class="container-fluid">
+                <a class="navbar-brand text-success d-md-inline-block d-none" href="#"><img src="img/strem-viola.png"
+                        alt="logo" width="200"></a><!-- logo che funziona anche da pulsante home-->
+                <div class="" id="navbarSupportedContent">
+                    <div class="d-flex">
+                        <select class="form-select mx-3 bg-transparent text-white" aria-label="Default select example ">
+                            <option selected>English</option>
+                            <option value="1">Italiano</option>
+                        </select>
+                        <button class="btn ms-auto text-white" type="button" data-bs-target="#staticBackdrop"
+                            data-bs-toggle="modal" id="login_b">Login</button><!--Bottone modal del login-->
+                        <div class="modal fade col-12 " id="staticBackdrop" aria-hidden="true"
+                            aria-labelledby="staticBackdropLabel" data-bs-backdrop="static" tabindex="-1"><!--    modal del login  -->
+                            <div class="modal-dialog modal-dialog-centered col-lg-12">
+                                <div class="modal-content col-lg-12 ">
+                                    <div class="modal-header" data-bs-theme="light">
+                                        <!-- Inizio conteunto della header -->
+                                        <h2 class="modal-title fs-5 text-white" id="staticBackdropLabel">Sign-in
+                                        </h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close" id="close"></button>
+                                        <!-- Fine conteunto della header -->
+
+                                    </div>
+                                    <form class="p-3" id="login"><!-- Form per il login -->
+                                        <div class="mb-3 p-3">
+                                            <i class="bi bi-at"></i><!-- Email -->
+                                            <label for="InputEmail1" class="form-label text-white">Email
+                                                address</label>
+                                            <input type="email" class="form-control text-white" id="InputEmail1" >
+                                        </div>
+                                        <div class="mb-3 p-3"><!-- Password -->
+                                            <label for="InputPassword1"
+                                                class="form-label text-white">Password</label>
+                                            <input type="password" class="form-control text-white" id="InputPassword1">
+                                        </div>
+                                        <div class="mb-3 p-3"><!-- Checkbox -->
+                                            <input type="checkbox" class="form-check-input" id="Check1">
+                                            <label class="form-check-label text-white btn-dark" for="Check1">Check me
+                                                out</label>
+                                        </div>
+                                    </form>
+                                    <div class="modal-footer"><!-- Button accesso -->
+                                        <button class="btn mx-auto text-white ">Accedi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav><!-- Fine della navbar -->
+    </header>
+    <main class="p-2 mt-5 mb-5"><!-- Contenuto principale con slogan e del form di registrazione-->
+        <div class="col-md-5 col-sm-10 mx-auto align-items-center">
+            <form id="registrazione" class="p-5" novalidate ><!-- form di registrazione -->
+                <h1 class="text-white text-center">Unleash Your Entertainment, Anytime and Anywhere</h1><!--slogan-->
+                <p class="text-center text-white">Enter your data and join us!</p>
+                <div class="row g-2 mb-3 p-3">
+                    <div class="col-md-6"><!-- Input del nome -->
+                        <label for="Nome" class="form-label text-white" id="lb_nome">First name</label>
+                        <input type="text" class="form-control text-white" id="Nome">
+                    </div>
+                    <div class="col-md-6"><!-- Input del cognome -->
+                        <label for="Cognome" class="form-label text-white" id="lb_cognome">Last name</label>
+                        <input type="text" class="form-control text-white" id="Cognome">
+                    </div>
+                </div>
+                <div class="mb-3 p-3"><!-- Input dell'email -->
+                    <label for="email" class="form-label text-white" id="lb_email">E-mail</label>
+                    <input type="email" class="form-control text-white" id="email">
+                </div>
+                <div class="mb-3 p-3"><!-- Input dell'email -->
+                    <label for="user" class="form-label text-white" id="lb_user">Create a username</label>
+                    <input type="text" class="form-control text-white" id="user">
+                </div>
+                <div class="mb-3 p-3"><!-- Primo inserimento della password-->
+                    <script></script>
+                    <label for="password" class="form-label text-white" id="lb_password">Password</label>
+                    <input type="password" class="form-control text-white" id="password">
+                    <label for="password" class="text-white" style="font-size: 12px;">password must contain one number, one symbol, an uppercase and a lowercase letter</label>
+                </div>
+                <div class="mb-3 p-3"><!-- Conferma della password -->
+                    <label for="password_confirm" class="form-label text-white" id="lb_password_confirm">Password confirmation  </label>
+                    <input type="password" class="form-control text-white" id="password_confirm">
+                </div>
+                <div class="row g-2 mb-3 p-3">
+                    <div class="col-md-6"><!-- Scelta data di nascita -->
+                        <label for="dataNascita" class="form-label text-white" id="lb_dataNascita">Birthday </label>
+                        <input type="date" class="form-control text-white" id="dataNascita">
+                    </div>
+                    <div class="col-md-6"><!--Scelta del proprio sesso-->
+                        <label for="scelta_genere" class="form-label text-white" id="lb_select" >Select your gender</label>
+                        <select class="form-select bg-transparent text-white" aria-label="Default select example" id="scelta_genere">
+                            <option class="null"  selected></option>
+                            <option value="male" class="male">Male</option>
+                            <option value="female" class="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 p-1 d-flex container-fluid "><!-- button di invio -->
+                    <button type="submit" class="btn btn-success text-white mx-auto w-25" id="register_b">Register</button>
+                </div>
+            </form>
+            <div class="modal fade col-12 " id="registerModal" aria-hidden="true" aria-labelledby="registerModal"
+                tabindex="-1"><!--    modal del login  -->
+            </div>
+        </div>
+    </main> 
+
+    <footer class="bg-black text-center p-4  border-top"><!-- Footer del sito con i vari link-->
+        <!-- Grid container -->
+        <div class="container p-2">
+            <!--Grid row-->
+            <div class="row d-flex col-12">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase text-white-50">FAQ</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#" class="text-white-50">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white-50">Informativa sui cookie</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white-50">About us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase text-white-50 mb-0">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-white-50">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white-50">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white-50">Link 3</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase text-white-50 mb-0">FAQ</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-white-50">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white-50">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white-50">Link 3</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center text-white-50 p-3">
+            © 2024 Copyright:
+            <a class="text-white-50" href="https://manueldisabatino.it/">manueldisabatino.it</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+
+</html>

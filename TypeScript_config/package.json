@@ -1,0 +1,11 @@
+{
+  "name": "esame-sessione-5-accademia-code-di_sabatino_manuel",
+  "version": "1.0.0",
+  "main": "validatore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

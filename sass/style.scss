@@ -1,0 +1,65 @@
+@import 'variabili';
+*:focus {
+    /* Foucus e datafocu mi servono per eliminare il bordo blu dagli elementi con autofocus */
+    box-shadow: none !important;
+}
+
+*[data-focus] {
+    box-shadow: none !important;
+}
+
+body {
+    background-color: black !important;
+    min-height: auto;
+
+    header {
+        .navbar {
+            .icon>i {/* icone della navbar */
+                font-size: 20px;
+                color: white;
+                padding: 5px 20px;
+                cursor: pointer;
+            }
+
+            .nav-link {
+                font-size: medium;
+
+                .nav-link:focus,
+                .nav-link:hover,
+                i:hover {
+                    color: $navLinkHover;
+                }
+            }
+        }
+    }
+
+}
+
+main {
+    min-height: 100vh;
+
+}
+.modal-content,
+#inputEmail,
+#InputEmail1,
+#InputPassword1 {
+    background-color: $inputBc;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+iframe {
+    display: none;
+}
+@media screen and (max-width: 992px) { /*  DImensioni schermo minore di un laptop */
+    #principale {
+        background-size: contain; /*  immagine di backgroud relativo al film di dettaglio*/
+    }
+
+    * {
+        font-size: large;
+    }
+}

@@ -1,0 +1,71 @@
+@import "variabili";
+
+body {
+        //immagine di background con gradienta per farla diventare più scura
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%), linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+    url(../img/wallpaper.jpg);
+    min-height: auto;
+    a {
+        text-decoration: none;
+    }
+    select {
+        &:hover {
+            cursor: pointer;
+        }
+        option {
+            background-color:$inputBc;
+            border: none;
+            cursor: pointer;
+        }
+
+    }
+    button {
+        border: $borderBut;
+        background-color:$buttonBC;
+
+        &:hover {
+            transition: 0.6s all;
+            color: $buttonCol;
+            background-color: $buttonHover;
+        }
+    }
+
+    .navbar {
+        background-color: $NavColor;
+        margin-bottom: 100px;
+
+        .modal-header {
+            // background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+            background-color: $buttonBC;
+        }
+
+        .modal-content {
+            border: $formBorder;
+            background-color: $inputBc;
+        }
+    }
+
+    main {
+        // grandezza minima che prende tutto il contenuto visibile
+        min-height: 100vh;
+    }
+
+    form{
+        background-color: $formBG;
+        border:$formBorder;
+    }
+    #registrazione{//form per la registrazione
+        border-radius: 25px;
+    }
+    #inputEmail,
+    #InputEmail1,
+    .form-control,
+    #scelta_genere{//vari input del form 
+        background-color:$inputBc !important;
+        &:focus{
+            background-color: $inputBc!important;
+        }
+    }
+
+}

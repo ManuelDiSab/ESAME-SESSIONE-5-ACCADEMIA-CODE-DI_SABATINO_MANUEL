@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "sourceMap": false,
+        "inlineSourceMap": true,
+         "target": "ES6",
+         "module": "es2015",
+        "lib": [
+            "ES2015",
+            "DOM"
+        ],
+        "noUnusedParameters": true,
+        "noImplicitAny": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "outDir": "dirJs",
+        "allowJs": false,
+        "alwaysStrict": true
+    }
+}
